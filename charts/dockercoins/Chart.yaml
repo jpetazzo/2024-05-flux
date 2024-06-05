@@ -30,12 +30,12 @@ dependencies:
 - name: generic
   version: "*"
   alias: redis
-#- name: generic
-#  version: "*"
-#  alias: rng
-#- name: generic
-#  version: "*"
-#  alias: webui
-#- name: generic
-#  version: "*"
-#  alias: worker
+- name: generic
+  version: "*"
+  alias: rng
+- name: generic
+  version: "*"
+  alias: webui
+- name: generic
+  version: "*"
+  alias: worker
