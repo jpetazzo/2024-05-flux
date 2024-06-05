@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: purple
+  name: purple
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: purple
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: purple
+        group: rainbow
+    spec:
+      containers:
+      - image: jpetazzo/color
+        name: color

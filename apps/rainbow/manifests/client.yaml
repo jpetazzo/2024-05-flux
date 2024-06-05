@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: client
+  name: client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: client
+    spec:
+      containers:
+      - command:
+        - sh
+        - -c
+        - while sleep 0.3; do curl -s -m1 rainbow; done
+        image: nixery.dev/shell/curl
+        name: curl
