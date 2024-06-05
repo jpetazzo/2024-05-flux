@@ -1,0 +1,17 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: dockercoins-umbrella
+  namespace: dockercoins-umbrella
+spec:
+  chart:
+    spec:
+      chart: ./charts/dockercoins
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: GitRepository
+        name: flux-system
+  install:
+    createNamespace: true
+  interval: 1m0s
