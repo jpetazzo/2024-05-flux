@@ -5,4 +5,4 @@ resources:
 - gotk-sync.yaml
 - ../../../apps/dockercoins-yaml/gotk.yaml
 - ../../../apps/dockercoins-helm/gotk.yaml
-- ../../../appps/rainbow/gotk.yaml
+- ../../../apps/rainbow/gotk.yaml
