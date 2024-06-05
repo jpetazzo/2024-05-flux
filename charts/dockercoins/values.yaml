@@ -1,0 +1,19 @@
+redis:
+  image:
+    repository: redis
+    tag: latest
+  livenessProbe: null
+  readinessProbe: null
+  service:
+    port: 6379
+
+webui:
+  service:
+    type: NodePort
+
+worker:
+  livenessProbe: null
+  readinessProbe: null
+  service: false
+
+
