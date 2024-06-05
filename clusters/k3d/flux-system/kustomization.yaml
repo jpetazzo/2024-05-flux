@@ -6,3 +6,4 @@ resources:
 - ../../../apps/dockercoins-yaml/gotk.yaml
 - ../../../apps/dockercoins-helm/gotk.yaml
 - ../../../apps/rainbow/gotk.yaml
+- ../../../apps/kube-prometheus-stack/gotk.yaml
