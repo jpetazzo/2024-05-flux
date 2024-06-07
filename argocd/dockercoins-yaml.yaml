@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dockercoins-yaml
+spec:
+  destination:
+    namespace: dockercoins-yaml
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: ./apps/dockercoins-yaml/manifests
+    repoURL: 'https://github.com/jpetazzo/2024-05-flux'
+    targetRevision: main
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

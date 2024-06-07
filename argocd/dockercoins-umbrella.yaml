@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dockercoins-umbrella
+  namespace: argocd
+spec:
+  destination:
+    namespace: dockercoins-umbrella
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: charts/dockercoins
+    repoURL: https://github.com/jpetazzo/2024-05-flux
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
